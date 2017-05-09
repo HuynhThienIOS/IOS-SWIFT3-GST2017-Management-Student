@@ -18,6 +18,7 @@
 		276602531EBE3F040084F480 /* StudentAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276602521EBE3F040084F480 /* StudentAdapter.swift */; };
 		276602551EBE44660084F480 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276602541EBE44660084F480 /* StudentTableViewController.swift */; };
 		276602571EBF88640084F480 /* DetailStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276602561EBF88640084F480 /* DetailStudentViewController.swift */; };
+		276602591EC01EEF0084F480 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276602581EC01EEF0084F480 /* AddStudentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		276602521EBE3F040084F480 /* StudentAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentAdapter.swift; sourceTree = "<group>"; };
 		276602541EBE44660084F480 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		276602561EBF88640084F480 /* DetailStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStudentViewController.swift; sourceTree = "<group>"; };
+		276602581EC01EEF0084F480 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				276602541EBE44660084F480 /* StudentTableViewController.swift */,
 				276602561EBF88640084F480 /* DetailStudentViewController.swift */,
+				276602581EC01EEF0084F480 /* AddStudentViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2766021E1EBE2C180084F480 /* AppDelegate.swift in Sources */,
+				276602591EC01EEF0084F480 /* AddStudentViewController.swift in Sources */,
 				276602511EBE3BFA0084F480 /* Student.swift in Sources */,
 				2766024F1EBE394E0084F480 /* StudentTableViewCell.swift in Sources */,
 				276602571EBF88640084F480 /* DetailStudentViewController.swift in Sources */,

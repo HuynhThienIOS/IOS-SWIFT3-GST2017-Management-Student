@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="To9-Eu-gPn" id="eQj-OG-kfc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student" translatesAutoresizingMaskIntoConstraints="NO" id="jPE-q5-IXH">
@@ -85,7 +85,7 @@
         <!--Add Student-->
         <scene sceneID="q9T-vl-7of">
             <objects>
-                <viewController id="zxG-Ow-u4O" sceneMemberID="viewController">
+                <viewController id="zxG-Ow-u4O" customClass="AddStudentViewController" customModule="ManagementStudent" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="To6-EV-sxn"/>
                         <viewControllerLayoutGuide type="bottom" id="ghm-KV-2tR"/>
@@ -97,7 +97,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-hw-MEy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Vj-WEQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Vj-WEQ" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student" translatesAutoresizingMaskIntoConstraints="NO" id="Mae-lx-Jgl">
@@ -187,6 +187,9 @@
                                             <constraint firstItem="Lrl-Jj-ytL" firstAttribute="leading" secondItem="mh0-Vj-WEQ" secondAttribute="leading" constant="20" id="yLh-eS-GGq"/>
                                             <constraint firstItem="8yK-mc-psG" firstAttribute="leading" secondItem="mh0-Vj-WEQ" secondAttribute="leading" constant="20" id="zH4-P1-FW5"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="userTappedBackground:" destination="zxG-Ow-u4O" eventType="touchDown" id="fUP-By-Bc5"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -208,8 +211,18 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Add Student" id="KZL-WS-1gf">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="5fm-Bf-fxd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="5fm-Bf-fxd">
+                            <connections>
+                                <action selector="saveButtonAction:" destination="zxG-Ow-u4O" id="ncf-8h-lHV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="flu-sj-PiS" id="bYT-Gd-P0X"/>
+                        <outlet property="nameTextField" destination="fU7-N2-y48" id="7se-QT-jjt"/>
+                        <outlet property="universityTextField" destination="8yK-mc-psG" id="V3s-mq-caR"/>
+                        <outlet property="yearOldTextField" destination="6Gx-Vl-gRA" id="aSj-Ti-1UJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUQ-dk-WVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +243,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-Gf-pgV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-bO-VZu">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-bO-VZu" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-UO-H6q">
@@ -269,6 +282,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="iqD-aH-RKI" id="47a-mR-oOo"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-ok-RCH">
                                                 <rect key="frame" x="20" y="296" width="335" height="30"/>
@@ -320,6 +336,9 @@
                                             <constraint firstItem="1cc-Xj-Yjz" firstAttribute="top" secondItem="DmE-tD-FMj" secondAttribute="bottom" constant="20" id="tfa-uD-NDD"/>
                                             <constraint firstAttribute="bottom" secondItem="wcw-rI-DEb" secondAttribute="bottom" constant="20" id="ulY-6X-85u"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="userTappedBackground:" destination="iqD-aH-RKI" eventType="touchDown" id="AaS-CM-Byq"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -341,7 +360,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Detail" id="b7h-zq-NKX">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="k9D-hR-aT8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="k9D-hR-aT8">
+                            <connections>
+                                <action selector="saveButtonAction:" destination="iqD-aH-RKI" id="G3U-ch-CTR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="wcw-rI-DEb" id="o5Z-4l-maz"/>

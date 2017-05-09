@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DetailStudentViewController.saveButtonAction(Any) -&gt; ():DetailStudentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nameTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddStudentViewController.saveButtonAction(Any) -&gt; ():AddStudentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "student">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
