@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Vj-WEQ" customClass="UIControl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student" translatesAutoresizingMaskIntoConstraints="NO" id="Mae-lx-Jgl">
                                                 <rect key="frame" x="123.5" y="20" width="128" height="128"/>
@@ -150,7 +150,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="flu-sj-PiS">
-                                                <rect key="frame" x="20" y="474" width="335" height="109"/>
+                                                <rect key="frame" x="20" y="474" width="335" height="173"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -178,7 +178,7 @@
                                             <constraint firstItem="fU7-N2-y48" firstAttribute="top" secondItem="Lrl-Jj-ytL" secondAttribute="bottom" constant="10" id="pDh-3Q-Djm"/>
                                             <constraint firstItem="8yK-mc-psG" firstAttribute="top" secondItem="qlC-4U-g8A" secondAttribute="bottom" constant="10" id="q5D-4z-VrM"/>
                                             <constraint firstItem="3pT-K6-9hq" firstAttribute="leading" secondItem="mh0-Vj-WEQ" secondAttribute="leading" constant="20" id="s0Q-LH-lKl"/>
-                                            <constraint firstAttribute="height" constant="603" id="sl1-k0-zIX"/>
+                                            <constraint firstAttribute="height" constant="667" id="sl1-k0-zIX"/>
                                             <constraint firstItem="fU7-N2-y48" firstAttribute="leading" secondItem="mh0-Vj-WEQ" secondAttribute="leading" constant="20" id="tzf-cY-HIA"/>
                                             <constraint firstItem="Mae-lx-Jgl" firstAttribute="top" secondItem="mh0-Vj-WEQ" secondAttribute="top" constant="20" id="uBP-jO-eZS"/>
                                             <constraint firstItem="cfx-1d-kMF" firstAttribute="leading" secondItem="mh0-Vj-WEQ" secondAttribute="leading" constant="20" id="vqs-a9-oMP"/>
@@ -188,7 +188,7 @@
                                             <constraint firstItem="8yK-mc-psG" firstAttribute="leading" secondItem="mh0-Vj-WEQ" secondAttribute="leading" constant="20" id="zH4-P1-FW5"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="userTappedBackground:" destination="zxG-Ow-u4O" eventType="touchDown" id="fUP-By-Bc5"/>
+                                            <action selector="userTappedBackground:" destination="zxG-Ow-u4O" eventType="touchDown" id="fFj-tD-qkH"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -220,6 +220,7 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="flu-sj-PiS" id="bYT-Gd-P0X"/>
                         <outlet property="nameTextField" destination="fU7-N2-y48" id="7se-QT-jjt"/>
+                        <outlet property="scrollView" destination="dAH-hw-MEy" id="yE1-rf-uVS"/>
                         <outlet property="universityTextField" destination="8yK-mc-psG" id="V3s-mq-caR"/>
                         <outlet property="yearOldTextField" destination="6Gx-Vl-gRA" id="aSj-Ti-1UJ"/>
                     </connections>
@@ -244,7 +245,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-bO-VZu" customClass="UIControl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-UO-H6q">
                                                 <rect key="frame" x="123.5" y="20" width="128" height="128"/>
@@ -299,7 +300,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-rI-DEb">
-                                                <rect key="frame" x="20" y="474" width="335" height="109"/>
+                                                <rect key="frame" x="20" y="474" width="335" height="173"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -325,7 +326,7 @@
                                             <constraint firstAttribute="trailing" secondItem="DmE-tD-FMj" secondAttribute="trailing" constant="20" id="X17-M7-Ed9"/>
                                             <constraint firstItem="RJS-oN-J1Q" firstAttribute="leading" secondItem="CJL-bO-VZu" secondAttribute="leading" constant="20" id="ZFk-Dy-9kh"/>
                                             <constraint firstItem="zuG-Lo-bPs" firstAttribute="leading" secondItem="CJL-bO-VZu" secondAttribute="leading" constant="20" id="cQJ-tP-WzS"/>
-                                            <constraint firstAttribute="height" constant="603" id="d3h-w5-v1T"/>
+                                            <constraint firstAttribute="height" constant="667" id="d3h-w5-v1T"/>
                                             <constraint firstItem="GYg-ok-RCH" firstAttribute="leading" secondItem="CJL-bO-VZu" secondAttribute="leading" constant="20" id="eqh-Ud-K6i"/>
                                             <constraint firstAttribute="trailing" secondItem="GYg-ok-RCH" secondAttribute="trailing" constant="20" id="gP9-gD-hkl"/>
                                             <constraint firstItem="zuG-Lo-bPs" firstAttribute="top" secondItem="RJS-oN-J1Q" secondAttribute="bottom" constant="10" id="jZj-6h-c5V"/>
@@ -369,6 +370,7 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="wcw-rI-DEb" id="o5Z-4l-maz"/>
                         <outlet property="nameTextField" destination="zuG-Lo-bPs" id="pdx-0q-dyI"/>
+                        <outlet property="scrollView" destination="AUm-Gf-pgV" id="RCV-pM-pf4"/>
                         <outlet property="universityTextField" destination="GYg-ok-RCH" id="NUM-en-0YD"/>
                         <outlet property="yearOldTextField" destination="DmE-tD-FMj" id="tSc-iL-zIX"/>
                     </connections>
